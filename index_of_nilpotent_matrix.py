@@ -1,3 +1,4 @@
+#Function to generate a matrix of size n rows*m columns
 def make_matrix(n,m):
  X=[]
  for i in range(n):
@@ -10,7 +11,7 @@ def make_matrix(n,m):
  print("desired square matrix is: ")
  return X
 
-
+#Function to define a zero matrix of size n rows*m columns
 def zero_matrix(n,m):
  X=[]
  for i in range(n):
@@ -21,7 +22,7 @@ def zero_matrix(n,m):
 
  return X
 
-
+#Function to perform multiplicatio of two matrices
 def multiply_matrix(X, Y):
 
     if len(X[0]) == len(Y):
@@ -38,6 +39,7 @@ def multiply_matrix(X, Y):
     else:
         print("Matrices cannot be multiplied")
 
+#Function to find the index of a nil-potent matrix
 def index_nilpotent_matrix(X):
 
     print("Index of the given nilpotent matrix is: ", end='')
@@ -49,17 +51,19 @@ def index_nilpotent_matrix(X):
     if X == Z:
         print(1)
     else:
-        count = 1
+        count = 2
         while Y != Z:
             count += 1
             Y = multiply_matrix(Y, X)
-        print(count + 1)
+        print(count)
 
 #Driver Code
-n=int(input("Enter the desired degree of the nilpotent matrix: "))
+
+n=int(input("Enter the desired degree of the nilpotent matrix: ")
+print("Please enter only a nil-potent matrix (or the output will be a garbage value)")
 Matrix=make_matrix(n,n)
 print(Matrix)
-index_nilpotent_matrix(Matrix)
+print("Degree of the nilpotent matrix is: "index_nilpotent_matrix(Matrix))
 
 
 
