@@ -61,9 +61,6 @@ def index_nilpotent_matrix(X):
 
 n=int(input("Enter the desired degree of the nilpotent matrix: ")
 print("Please enter only a nil-potent matrix (or the output will be a garbage value)")
-Matrix=make_matrix(n,n)
-print(Matrix)
-print("Degree of the nilpotent matrix is: "index_nilpotent_matrix(Matrix))
-
-
-
+matrix=make_matrix(n,n)
+print(matrix)
+print("Degree of the nilpotent matrix is: "index_nilpotent_matrix(matrix))
